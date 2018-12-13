@@ -1,0 +1,5 @@
+/src/KickSignupWeb/appsettings.Debug.json
+/src/KickSignupWeb/appsettings.Development.json
+/src/.vs/*
+/src/KickSignupWeb/obj*
+/src/KickSignupWeb/bin*
