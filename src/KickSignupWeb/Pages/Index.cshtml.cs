@@ -1,4 +1,5 @@
 ﻿using KickSignupWeb.Models;
+using KickSignupWeb.Repo;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -6,6 +7,13 @@ namespace KickSignupWeb.Pages
 {
     public class IndexModel : PageModel
     {
+        private readonly ISignupRepository _repository;
+
+        public IndexModel(ISignupRepository repository)
+        {
+            _repository = repository;
+        }
+
         [BindProperty]
         public SignMeUpModel Contact { get; set; }
 
@@ -20,8 +28,8 @@ namespace KickSignupWeb.Pages
                 return Page();
 
             Contact.SignupDateTime = System.DateTime.Now;
+            _repository.Insert(Contact);
 
-            //write to sql  contactForm
             return Redirect("/Tak");
         }
 

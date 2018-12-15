@@ -27,10 +27,5 @@ namespace KickSignupWeb.Models
         [Required(ErrorMessage = "Udfyld dit telefonnummer")]
         public string Phone { get; set; }
 
-
-
-        [Display(Name = "Skal vi sende dig en kopi af dine oplysninger?")]
-        public bool SendCopy { get; set; }
-
     }
 }

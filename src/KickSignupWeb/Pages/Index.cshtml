@@ -19,7 +19,7 @@
             <img src="~/images/image1.jpg" alt="Image1" class="img-rounded" />
             <div class="carousel-caption" role="option">
                 <p>
-                    Vi har i sæsonen 2019 gjort os særlig umage for at modtage dig i løbeklubberne
+                    Vi har gjort os særlig umage for at modtage dig i løbeklubberne
                 </p>
             </div>
         </div>
@@ -105,6 +105,7 @@
                 <div class="col-md-6">
                     <input asp-for="Contact.PreferredClub" placeholder="skriv navn på klub" class="form-control" />
                     <span asp-validation-for="Contact.PreferredClub"></span>
+        <small>Hvis du kender navnet på den klub du gerne vil starte i</small>
                 </div>
             </div>
         </div>
@@ -116,7 +117,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <button type="submit">Send formular</button>
+            <button type="submit" class="btn-success">Ja tak!, kontakt mig</button>
         </div>
     </div>
 </form>
