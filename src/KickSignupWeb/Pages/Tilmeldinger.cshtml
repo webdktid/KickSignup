@@ -1,0 +1,30 @@
+﻿@page
+@model KickSignupWeb.Pages.TilmeldingerModel
+@{
+    ViewData["Title"] = "Tilmeldinger";
+}
+
+<h2>Tilmeldinger</h2>
+<br/>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Tidspunkt</th>
+        <th>Navn</th>
+        <th>Email</th>
+        <th>Klub</th>
+
+    </tr>
+    @foreach (var row in Model.Signups)
+    {
+    <tr>
+        <td>@row.Id</td>
+        <td>@row.SignupDateTime</td>
+        <td>@row.Name</td>
+        <td>@row.Email</td>
+        <td>@row.PreferredClub</td>
+    </tr>
+    }
+
+</table>

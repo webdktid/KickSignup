@@ -5,6 +5,8 @@ namespace KickSignupWeb.Models
 {
     public class SignMeUpModel
     {
+        public int Id { get; set; } 
+
         [Display(Name = "Dit navn")]
         [Required(ErrorMessage = "Skriv dit navn")]
         public string Name { get; set; }

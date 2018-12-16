@@ -1,5 +1,7 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
 using KickSignupWeb.Models;
@@ -26,6 +28,17 @@ namespace KickSignupWeb.Repo
                                 + " VALUES(@Name, @Email,@SignupDateTime,@PreferredClub,@ZipCode,@Phone)";
                 dbConnection.Open();
                 dbConnection.Execute(sQuery, signMeUpModel);
+            }
+        }
+
+        public List<SignMeUpModel> GetAll()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                string sql = "Select * from Signups ";
+                dbConnection.Open();
+                var signMeUpModels = dbConnection.Query<SignMeUpModel>(sql);
+                return signMeUpModels.ToList();
             }
         }
 
