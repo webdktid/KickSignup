@@ -18,19 +18,17 @@
         <div class="item active">
             <img src="~/images/image1.jpg" alt="Image1" class="img-rounded" />
             <div class="carousel-caption" role="option">
-                <p>
-                    Vi har gjort os særlig umage for at modtage dig i løbeklubberne
-                </p>
-                <a href="#tilmelding" class="btn-success" style="padding: 7px">Tilmeld dig</a>
+                <h1>Kick - din løbestart</h1>
+              
             </div>
         </div>
         <div class="item">
             <img src="~/images/image2.jpg" alt="Image2" class="img-rounded" />
             <div class="carousel-caption" role="option">
+                <h1>Kick - din løbestart</h1>
                 <p>
                     Meld dig til her, Så er du godt på vej til at blive løber!
                 </p>
-                <a href="#tilmelding" class="btn-success" style="padding: 7px">Tilmeld dig</a>
             </div>
         </div>
     
@@ -49,34 +47,31 @@
 
 
 <div class="dark">
-    <h4>Drømmer du om et liv med mere overskud, motion og frisk luft?</h4>
-    <P>
-        Start op i uge 10 sammen med andre nye løbere og oplev, hvordan du bliver bedre uge efter uge.
-    </P>
-    <P>
-        Du får:<br />
-        <ul>
-            <li>Større overskud og glæde i hverdagen</li>
-            <li>Hjælp og opbakning fra motiverede trænere</li>
-            <li>Løb og skadesforebyggende træning</li>
-        </ul>
-        
 
-    </P>
-    <P>Blev en del af noget større, med et hyggeligt fælles event for løbeskoler i hele Østjylland. <P>
-    <ul>
-        <li>2 ugenlige træninger</li>
-        <li>Pris 499 kr. </li>
-        <li>Motiverede trænere, der sikre at ingen løber alene!</li>
-        <li>Bliv en del af klubben</li>
-    <li>Kammeratskab og grin</li>
-    <li>Stor fælles event med frokost, søndag den 2. juni 2019</li>
-    <li>T-shirts og gaver</li>
-    </ul>
+    <h4>Kunne du godt tænke dig at komme i gang med at løbe i et fedt fællesskab med andre? Vi lærer dig at løbe og at komme til at nyde det.</h4>
+<h5>KICK – Din løbestart er et nyt tilbud fra en række østjyske løbeklubber, lavet i samarbejde med DGI Løb,målrettet helt voksne, der godt kunne tænke sig at komme i gang med at løbe.</h5>
+
+<P>KICK – Din løbetræninger giver dig:</P>
+<ul>
+    <li>Et trygt og sikkert fællesskab at komme i gang med løb</li>
+    <li>Adgang til et begynderhold i en løbeklub i dit lokalområde i 12 uger</li>
+    <li>Hjælp og opbakning fra motiverede trænere</li>
+    <li>Løb i dit tempo og skadesforebyggende træning</li>
+    <li>En lyst til at løbe og ikke mindst nyde det</li>
+    <li>Større overskud og glæde i hverdagen på længere sigt</li>
+    <li>En flot løbe-T-shirt</li>
+</ul>
+
+<strong>Hvorfor skal jeg tilmelde mig?</strong>
+<p>Det kan være, du vil i gang med at motionere igen efter en længere pause. Det kan være, at du aldrig før har dyrket regelmæssig motion, men vil til at starte. Det er lige meget, hvor du kommer fra og hvad dit niveau er.</p>
+<p>Hos KICK – Din løbestart har vi ikke fokus på tider, kilometer eller om du har det sidste nye skrig indenfor løbetøj. Her kan alle kan være med uanset niveau og forudgående erfaringer.</p>
+<p>KICK – Din løbestart giver du mulighed for at komme sikkert i gang med løb i en løbeklub i dit lokalområde med opstart i uge 10, 2019. Du starter på et begynderhold sammen med andre nye løbere, og du vil hurtigt opleve, hvordan du bliver bedre uge efter uge i et fedt fællesskab sammen med de andre.
+
+<p>Forløbet afsluttes efter 12 uger med en stor løbeevent med begynderholdene fra de andre østjyske løbeklubber søndag den 2. juni 2019 i Mindeparken i Aarhus. Herefter bliver du inviteret til at fortsætte med at løbe på hold i din lokale klub – selvfølgelig sammen med dem, du er startet med.</p>
+
+<p>Vi glæder os til at byde dig velkommen.</p>
 
     </div>
-
-
 
 
 <a id="tilmelding"></a>
@@ -97,18 +92,6 @@
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label asp-for="Contact.Email" class="col-md-3 right">Email:</label>
-                <div class="col-md-6">
-                    <input asp-for="Contact.Email" placeholder="Skriv din email" class="form-control" />
-                    <span asp-validation-for="Contact.Email"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
                 <label asp-for="Contact.ZipCode" class="col-md-3 right">Postnummer:</label>
                 <div class="col-md-6">
                     <input asp-for="Contact.ZipCode" placeholder="Skriv dit postnummer" class="form-control" />
@@ -118,7 +101,7 @@
         </div>
     </div>
 
-
+  
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
@@ -130,27 +113,43 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label asp-for="Contact.PreferredClub" class="col-md-3 right">Ønsket klub:</label>
+                <label asp-for="Contact.Email" class="col-md-3 right">Email:</label>
                 <div class="col-md-6">
-                    <input asp-for="Contact.PreferredClub" placeholder="skriv navn på klub" class="form-control" />
-                    <span asp-validation-for="Contact.PreferredClub"></span>
-        <small>Hvis du kender navnet på den klub du gerne vil starte i</small>
+                    <input asp-for="Contact.Email" placeholder="Skriv din email" class="form-control" />
+                    <span asp-validation-for="Contact.Email"></span>
                 </div>
             </div>
         </div>
     </div>
 
-   
+
+
+    @*<div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Contact.PreferredClub" class="col-md-3 right">Ønsket klub:</label>
+                    <div class="col-md-6">
+                        <input asp-for="Contact.PreferredClub" placeholder="skriv navn på klub" class="form-control" />
+                        <span asp-validation-for="Contact.PreferredClub"></span>
+            <small>Hvis du kender navnet på den klub du gerne vil starte i</small>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+
 
 
 
     <div class="row">
         <div class="col-md-12">
-            <button type="submit" class="btn-success">Ja tak!, kontakt mig</button>
+            <p class="col-md-3 right" />
+            <div class="col-md-6">
+                <button type="submit" class="btn-success">Ja tak, min nærmeste lokale løbeklub må gerne kontakte mig med mere information</button>
+            </div>
         </div>
     </div>
 </form>
