@@ -13,7 +13,7 @@
         <th>Tidspunkt</th>
         <th>Navn</th>
         <th>Email</th>
-        <th>Klub</th>
+        <th>Postnummer</th>
 
     </tr>
     @foreach (var row in Model.Signups)
@@ -23,7 +23,7 @@
         <td>@row.SignupDateTime</td>
         <td>@row.Name</td>
         <td>@row.Email</td>
-        <td>@row.PreferredClub</td>
+        <td>@row.ZipCode</td>
     </tr>
     }
 
