@@ -16,15 +16,28 @@
         <th>Postnummer</th>
 
     </tr>
-    @foreach (var row in Model.Signups)
+    @foreach (var row in Model.Signups.OrderBy(x=>x.Id))
     {
-    <tr>
-        <td>@row.Id</td>
-        <td>@row.SignupDateTime</td>
-        <td>@row.Name</td>
-        <td>@row.Email</td>
-        <td>@row.ZipCode</td>
-    </tr>
+        <tr>
+            <td>@row.Id</td>
+            <td>@row.SignupDateTime</td>
+            <td>@row.Name</td>
+            <td>@row.Email</td>
+            <td>@row.ZipCode</td>
+        </tr>
     }
+   
+</table>
 
+
+<hr/>
+<p>Antal pr postnummer:</p>
+<table class="table">
+    @foreach (var r in Model.Signups.GroupBy(x => x.ZipCode))
+    {
+        <tr>
+            <td>@r.Key</td>
+            <td>@r.Count()</td>
+        </tr>
+    }
 </table>
