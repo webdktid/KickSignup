@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using KickSignupWeb.Models;
 using KickSignupWeb.Repo;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
 
 namespace KickSignupWeb.Pages
 {
+   // [Authorize]
     public class TilmeldingerModel : PageModel
     {
         private readonly IConfiguration _configuration;
@@ -24,12 +26,9 @@ namespace KickSignupWeb.Pages
             _signupRepository = signupRepository;
         }
 
-        public IActionResult OnGet(string accesskey)
+
+        public IActionResult OnGet()
         {
-            if (accesskey != _configuration["accesskey"])
-            {
-                return Content("Ingen adgang");
-            }
 
             Signups = _signupRepository.GetAll();
 

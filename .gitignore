@@ -4,3 +4,5 @@
 /src/KickSignupWeb/obj*
 /src/KickSignupWeb/bin*
 /src/KickSignupWeb/Properties*
+/Solution.sln
+/.vs*
