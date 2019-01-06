@@ -35,9 +35,11 @@
 <table class="table">
     @foreach (var r in Model.Signups.GroupBy(x => x.ZipCode))
     {
-        <tr>
-            <td>@r.Key</td>
-            <td>@r.Count()</td>
-        </tr>
+    <tr>
+        <td>@r.Key</td>
+        <td>@r.Count()</td>
+    </tr>
     }
+
+    <tr><td>Ialt</td><td>@Model.Signups.Count</td></tr>
 </table>
