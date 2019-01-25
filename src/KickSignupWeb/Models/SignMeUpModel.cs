@@ -29,5 +29,7 @@ namespace KickSignupWeb.Models
         [Required(ErrorMessage = "Udfyld dit telefonnummer")]
         public string Phone { get; set; }
 
+        public string Area { get; set; }
+
     }
 }

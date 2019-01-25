@@ -14,6 +14,7 @@
         <th>Navn</th>
         <th>Email</th>
         <th>Postnummer</th>
+        <th>Område</th>
 
     </tr>
     @foreach (var row in Model.Signups.OrderBy(x=>x.Id))
@@ -24,6 +25,8 @@
             <td>@row.Name</td>
             <td>@row.Email</td>
             <td>@row.ZipCode</td>
+            <td>@row.Area?</td>
+
         </tr>
     }
    

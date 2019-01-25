@@ -1,0 +1,84 @@
+﻿@model KickSignupWeb.Models.SignUpPageModel
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+
+<form class="form-horizontal white" method="post">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Contact.Name" class="col-md-3 right">Navn:</label>
+                <div class="col-md-6">
+                    <input asp-for="Contact.Name" placeholder="Skriv dit navn" class="form-control" />
+                    <span asp-validation-for="Contact.Name"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Contact.ZipCode" class="col-md-3 right">Postnummer:</label>
+                <div class="col-md-6">
+                    <input asp-for="Contact.ZipCode" placeholder="Skriv dit postnummer" class="form-control" />
+                    <span asp-validation-for="Contact.ZipCode"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Contact.Phone" class="col-md-3 right">Telefonnummer:</label>
+                <div class="col-md-6">
+                    <input asp-for="Contact.Phone" placeholder="Skriv dit telefonnummer" class="form-control" />
+                    <span asp-validation-for="Contact.Phone"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Contact.Email" class="col-md-3 right">Email:</label>
+                <div class="col-md-6">
+                    <input asp-for="Contact.Email" placeholder="Skriv din email" class="form-control" />
+                    <span asp-validation-for="Contact.Email"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @*<div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Contact.PreferredClub" class="col-md-3 right">Ønsket klub:</label>
+                    <div class="col-md-6">
+                        <input asp-for="Contact.PreferredClub" placeholder="skriv navn på klub" class="form-control" />
+                        <span asp-validation-for="Contact.PreferredClub"></span>
+            <small>Hvis du kender navnet på den klub du gerne vil starte i</small>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <p class="col-md-3 right" />
+            <div class="col-md-6">
+                <button type="submit" class="btn-success">Ja tak, min nærmeste lokale løbeklub må gerne kontakte mig med mere information</button>
+            </div>
+        </div>
+    </div>
+</form>

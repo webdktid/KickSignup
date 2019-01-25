@@ -5,16 +5,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace KickSignupWeb.Pages
 {
-    public class IndexModel : SignUpPageModel
+    public class RoyalRunModel : SignUpPageModel
     {
         private readonly ISignupRepository _repository;
 
-        public IndexModel(ISignupRepository repository)
+        public RoyalRunModel(ISignupRepository repository)
         {
             _repository = repository;
         }
 
-    
+        [BindProperty]
+        public SignMeUpModel Contact { get; set; }
 
         public void OnGet()
         {
@@ -26,8 +27,7 @@ namespace KickSignupWeb.Pages
             if (!ModelState.IsValid)
                 return Page();
 
-            Contact.Area = "Kick";
-
+            Contact.Area = "Royal Run";
             Contact.SignupDateTime = System.DateTime.Now;
             _repository.Insert(Contact);
 
