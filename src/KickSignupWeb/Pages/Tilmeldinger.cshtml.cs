@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace KickSignupWeb.Pages
 {
-  
+  [Authorize]
     public class TilmeldingerModel : PageModel
     {
         private readonly IConfiguration _configuration;

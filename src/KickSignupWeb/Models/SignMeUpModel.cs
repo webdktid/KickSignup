@@ -21,6 +21,7 @@ namespace KickSignupWeb.Models
         [Display(Name = "Ønsket klub")]
         public string PreferredClub { get; set; }
 
+        [Range(1000, 9999)]
         [Display(Name = "Postnummer")]
         [Required(ErrorMessage = "Udfyld dit postnummer")]
         public string ZipCode { get; set; }

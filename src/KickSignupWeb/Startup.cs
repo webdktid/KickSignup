@@ -1,6 +1,7 @@
 using System;
 using KickSignupWeb.Repo;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -34,8 +35,12 @@ namespace KickSignupWeb
             services.AddTransient<ISignupRepository, SignupRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            #region snippet1
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie();
+            #endregion
 
-        
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 
         }
@@ -57,14 +62,9 @@ namespace KickSignupWeb
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-
-            app.UseWhen(x => (x.Request.Path.StartsWithSegments("/tilmeldinger", StringComparison.OrdinalIgnoreCase)),
-                builder =>
-                {
-                    builder.UseMiddleware<KickSignupWeb.Middlewares.AuthenticationMiddleware>();
-                });
-
-
+            #region snippet2
+            app.UseAuthentication();
+            #endregion
 
 
             app.UseMvc();
